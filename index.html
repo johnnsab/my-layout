@@ -3,10 +3,202 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My layout</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    
+    <title>My layout - the blank for a business card website</title>
+
+    <!-- Meta Information starts -->
+	<meta name="description" content="Empty blank for business card website">
+	<meta name="keywords" content="blank, business card, portfolio, job, freelance, business projects, html, css, js">
+	<meta name="author" content="Sabran Ivan">
+	<meta name="robots" content="index,follow">
+	<meta name="copyright" content="organization">
+	<!-- Meta Information ends -->
+
+    <!-- Favicon starts -->
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="img/favicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
+    <link rel="icon" type="image/x-icon" href="img/favicon/favicon.ico">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="img/favicons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Favicon ends -->
+
+    <!-- Open Graph starts -->
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="">
+	<meta property="og:title" content="My layout - the blank for a business card website">
+	<meta property="og:image" content="img/og-image.jpg">
+	<meta property="og:description" content="Empty blank for business card website">
+	<meta property="og:site_name" content="My layout - the blank for a business card website">
+	<meta property="og:locale" content="en_US">
+	<!-- Open Graph ends -->
+
+    <!-- fonts and styles starts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+	<!-- fonts and styles ends -->
+
+    <!-- Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-BVG112E17D"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'G-BVG112E17D');
+	</script>
+	<!-- Google Analytics ends-->
+
 </head>
+
 <body>
-    <h1>My layout</h1>
+    <header class="header">
+        <div class="container">
+            <a href="#" class="logo-link">
+                <img class="logo-img" src="img/logo.png" alt="triangle">
+                <p class="bold">My layout</p>
+            </a>
+                <nav class="menu">
+                    <ul class="menu__list">
+                        <li class="menu__list-item">
+                            <a href="#" class="menu-link_active" target="blank">
+                                Main
+                            </a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a href="#" class="menu-link" target="blank">
+                                Portfolio
+                            </a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a href="#" class="menu-link" target="blank">
+                                Services
+                            </a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a href="#" class="menu-link" target="blank">
+                                Contacts
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+        </div>
+    </header>
+    <main class="main">
+        <section class="main-section">
+            <div class="container">
+                <h1 class="main-title">Main title of the page</h1>
+                <ul class="card__wrapper">
+                    <li class="first__card">
+                        <p class="main-subtitle">
+                            First testing card
+                        </p>
+                            <p class="main-text">
+                                Lorem ipsum dolor sit, amet <br> consectetur adipisicing elit. <br> Nihil ipsam labore similique <br> corrupti facere consequuntur, <br>
+                                modi autem molestias aut <br> magni iusto hic perferendis. <br> Nam tenetur optio aspernatur <br> dolor! Est, quisquam?
+                            </p>
+                    </li>
+                    <li class="second__card">
+                        <p class="main-subtitle">
+                            Second testing card
+                        </p>
+                            <p class="main-text">
+                                Lorem ipsum dolor sit, amet <br> consectetur adipisicing elit. <br> Nihil ipsam labore similique <br> corrupti facere consequuntur, <br>
+                                modi autem molestias aut <br> magni iusto hic perferendis. <br> Nam tenetur optio aspernatu... <br> <span class="full-text">Read more</span>
+                            </p>
+
+                    </li>
+                    <li class="third__card">
+                        <p class="main-subtitle">
+                            Third testing card
+                        </p>
+                            <p class="main-text">
+                                Lorem ipsum dolor sit, amet <br> consectetur adipisicing elit. <br> Nihil ipsam labore similique <br> corrupti facere consequuntur, <br>
+                                modi autem molestias aut <br> magni iusto hic perferendis. <br> Nam tenetur optio aspernatu... <br> <span class="full-text">Read more</span>
+                            </p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="secondary-section">
+            <div class="container">
+                <h2 class="secondary-title">Secondary title of the page</h2>
+                <div class="wrapper">
+                    <form action="POST" class="">
+                        <ul class="form__wrapper">
+                            <li>
+                                <input type="text" class="form__input" name="name" placeholder="Name" required>
+                            </li>
+                            <li>
+                                <input type="tel" class="form__input" name="telephone" placeholder="Telephone" required>
+                            </li>
+                            <li>
+                                <input type="email" class="form__input" name="email" placeholder="Email" required>
+                            </li>
+                            <li>
+                                <input type="text" class="form__input_increased" name="message" placeholder="Message" required>
+                            </li>
+                            <li>
+                                <button class="form__button">Send</button>
+                            </li>
+                        </ul>
+                    <span class="form__secure-data">* your data is securely protected</span>
+                    </form>
+                    <div class="business-card">
+                        <div class="card-wrapper">
+                            <p class="card-title">
+                                Card title
+                            </p>
+                            <p class="card-text">
+                                Lorem ipsum dolor sit, amet <br> consectetur adipisicing elit. Nihil <br> ipsam labore similique corrupti <br> facere consequuntur, modi autem <br> 
+                                molestias aut magni iusto hic <br> perferendis. Nam tenetur optio <br> aspernatur dolor! Est, quisquam? <br>
+                                Lorem ipsum dolor sit, amet <br> consectetur adipisicing elit. Nihil <br> ipsam labore similique corrupti <br> facere consequuntur, 
+                            </p>
+                        </div>
+                        <img class="magnifier-pic" src="img/magnifier.png" alt="magnifier">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__wrapper">
+                <a href="#" class="footer-logo">
+                    <img class="logo-img" src="img/logo.png" alt="triangle">
+                </a>
+                <p class="footer-copyright">
+                    2022 / All rights reserved 
+                </p>
+            </div>
+            <form action="POST" class="">
+                <div class="footer-form__wrapper">
+                    <button class="some__button">Some button</button>
+                    <button class="another__button">Another button</button>
+                    <input type="text" class="footer-form__input" name="just some text" placeholder="Just some text...">
+                </div>
+            </form>
+            <p class="footer-text">
+                Nice work! I’m good!
+            </p>
+        </div>
+    </footer>
+
+<script src="js/script.js"></script>
 </body>
 </html>
