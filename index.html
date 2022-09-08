@@ -10,7 +10,7 @@
     <!-- Meta Information starts -->
 	<meta name="description" content="Empty blank for business card website">
 	<meta name="keywords" content="blank, business card, portfolio, job, freelance, business projects, html, css, js">
-	<meta name="author" content="Sabran Ivan">
+	<meta name="author" content="S Ivan">
 	<meta name="robots" content="index,follow">
 	<meta name="copyright" content="organization">
 	<!-- Meta Information ends -->
@@ -71,27 +71,27 @@
         <div class="container">
             <a href="#" class="logo-link">
                 <img class="logo-img" src="img/logo.png" alt="triangle">
-                <p class="bold">My layout</p>
+                <p class="logo-link__text">My layout</p>
             </a>
                 <nav class="menu">
-                    <ul class="menu__list">
-                        <li class="menu__list-item">
-                            <a href="#" class="menu-link_active" target="blank">
+                    <ul>
+                        <li>
+                            <a href="#" class="menu__link menu__link_active" target="_blank">
                                 Main
                             </a>
                         </li>
-                        <li class="menu__list-item">
-                            <a href="#" class="menu-link" target="blank">
+                        <li>
+                            <a href="#" class="menu__link" target="_blank">
                                 Portfolio
                             </a>
                         </li>
-                        <li class="menu__list-item">
-                            <a href="#" class="menu-link" target="blank">
+                        <li>
+                            <a href="#" class="menu__link" target="_blank">
                                 Services
                             </a>
                         </li>
-                        <li class="menu__list-item">
-                            <a href="#" class="menu-link" target="blank">
+                        <li>
+                            <a href="#" class="menu__link" target="_blank">
                                 Contacts
                             </a>
                         </li>
@@ -102,35 +102,35 @@
     <main class="main">
         <section class="main-section">
             <div class="container">
-                <h1 class="main-title">Main title of the page</h1>
-                <ul class="card__wrapper">
-                    <li class="first__card">
-                        <p class="main-subtitle">
+                <h1 class="main-section__title">Main title of the page</h1>
+                <ul class="main-section__card-list card-list">
+                    <li class="card-list__item card">
+                        <p class="card__title">
                             First testing card
                         </p>
-                            <p class="main-text">
-                                Lorem ipsum dolor sit, amet <br> consectetur adipisicing elit. <br> Nihil ipsam labore similique <br> corrupti facere consequuntur, <br>
-                                modi autem molestias aut <br> magni iusto hic perferendis. <br> Nam tenetur optio aspernatur <br> dolor! Est, quisquam?
-                            </p>
+                        <p class="card__text">
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil ipsam labore similique corrupti facere consequuntur,  
+                                modi autem molestias aut magni iusto hic perferendis. Nam tenetur optio aspernatur dolor! Est, quisquam?
+                        </p>
                     </li>
-                    <li class="second__card">
-                        <p class="main-subtitle">
+                    <li class="card-list__item card-list__item_bold-border">
+                        <p class="card__title">
                             Second testing card
                         </p>
-                            <p class="main-text">
-                                Lorem ipsum dolor sit, amet <br> consectetur adipisicing elit. <br> Nihil ipsam labore similique <br> corrupti facere consequuntur, <br>
-                                modi autem molestias aut <br> magni iusto hic perferendis. <br> Nam tenetur optio aspernatu... <br> <span class="full-text">Read more</span>
-                            </p>
+                        <p class="card__text">
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil ipsam labore similique corrupti facere consequuntur,                                 
+                                modi autem molestias aut magni iusto hic perferendis. Nam tenetur optio aspernatu... <a class="full-text">Read more</a>
+                        </p>
 
                     </li>
-                    <li class="third__card">
-                        <p class="main-subtitle">
+                    <li class="card-list__item card-list__item_shadow">
+                        <p class="card__title">
                             Third testing card
                         </p>
-                            <p class="main-text">
-                                Lorem ipsum dolor sit, amet <br> consectetur adipisicing elit. <br> Nihil ipsam labore similique <br> corrupti facere consequuntur, <br>
-                                modi autem molestias aut <br> magni iusto hic perferendis. <br> Nam tenetur optio aspernatu... <br> <span class="full-text">Read more</span>
-                            </p>
+                        <p class="card__text">
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil ipsam labore similique corrupti facere consequuntur,                                 
+                                modi autem molestias aut magni iusto hic perferendis. Nam tenetur optio aspernatu... <a class="full-text">Read more</a>
+                        </p>
                     </li>
                 </ul>
             </div>
@@ -139,38 +139,26 @@
             <div class="container">
                 <h2 class="secondary-title">Secondary title of the page</h2>
                 <div class="wrapper">
-                    <form action="POST" class="">
-                        <ul class="form__wrapper">
-                            <li>
-                                <input type="text" class="form__input" name="name" placeholder="Name" required>
-                            </li>
-                            <li>
-                                <input type="tel" class="form__input" name="telephone" placeholder="Telephone" required>
-                            </li>
-                            <li>
-                                <input type="email" class="form__input" name="email" placeholder="Email" required>
-                            </li>
-                            <li>
-                                <input type="text" class="form__input_increased" name="message" placeholder="Message" required>
-                            </li>
-                            <li>
-                                <button class="form__button">Send</button>
-                            </li>
-                        </ul>
-                    <span class="form__secure-data">* your data is securely protected</span>
+                    <form action="POST" class="form">
+                        <input type="text" class="form__input" name="name" placeholder="Name" required>
+                        <input type="tel" class="form__input" name="telephone" placeholder="Telephone" required>
+                        <input type="email" class="form__input" name="email" placeholder="Email" required>
+                        <textarea type="text" class="form__input" name="message" placeholder="Message" required></textarea>
+                        <button class="form__button">Send</button>
+                        <span class="form__secure-data">* your data is securely protected</span>
                     </form>
-                    <div class="business-card">
-                        <div class="card-wrapper">
-                            <p class="card-title">
+                    <div class="cutaway">
+                            <p class="cutaway__title">
                                 Card title
                             </p>
-                            <p class="card-text">
-                                Lorem ipsum dolor sit, amet <br> consectetur adipisicing elit. Nihil <br> ipsam labore similique corrupti <br> facere consequuntur, modi autem <br> 
-                                molestias aut magni iusto hic <br> perferendis. Nam tenetur optio <br> aspernatur dolor! Est, quisquam? <br>
-                                Lorem ipsum dolor sit, amet <br> consectetur adipisicing elit. Nihil <br> ipsam labore similique corrupti <br> facere consequuntur, 
-                            </p>
-                        </div>
-                        <img class="magnifier-pic" src="img/magnifier.png" alt="magnifier">
+                                <div class="cutaway__wrapper">
+                                    <p class="cutaway__text">
+                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil ipsam labore similique corrupti facere consequuntur, modi autem 
+                                        molestias aut magni iusto hic perferendis. Nam tenetur optio aspernatur dolor! Est, quisquam?                                 
+                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil ipsam labore similique corrupti facere consequuntur, 
+                                    </p>
+                                    <img class="cutaway__magnifier" src="img/magnifier.png" alt="magnifier">
+                                </div>
                     </div>
                 </div>
             </div>
@@ -182,18 +170,16 @@
                 <a href="#" class="footer-logo">
                     <img class="logo-img" src="img/logo.png" alt="triangle">
                 </a>
-                <p class="footer-copyright">
+                <p class="footer__copyright">
                     2022 / All rights reserved 
                 </p>
             </div>
-            <form action="POST" class="">
-                <div class="footer-form__wrapper">
-                    <button class="some__button">Some button</button>
-                    <button class="another__button">Another button</button>
-                    <input type="text" class="footer-form__input" name="just some text" placeholder="Just some text...">
-                </div>
-            </form>
-            <p class="footer-text">
+            <div class="footer__interaction">
+                <button class="footer__button">Some button</button>
+                <button class="footer__button footer__button_blue">Another button</button>
+                <input type="text" class="footer__input" placeholder="Just some text...">
+            </div>
+            <p class="footer__text">
                 Nice work! I’m good!
             </p>
         </div>

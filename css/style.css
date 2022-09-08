@@ -5,7 +5,8 @@
    border: 0;  
    font-size: 100%;  
    font: inherit;  
-   vertical-align: baseline; 
+   vertical-align: baseline;
+   box-sizing: border-box;
  }
 
  a, a:hover {
@@ -16,6 +17,10 @@
  li {
    display: block;
  }
+
+ input, textarea {
+   outline: none;
+}
 
  /* Fonts connecting */
 
@@ -31,21 +36,15 @@
 
 /* Header */
 .header {
-   height: 100px;
    background-color: #22A2EC;
    color: #fff;
 }
 
 .header .container {
+   height: 100px;
    display: flex;
    justify-content: space-between;
    align-items: center;
-}
-
-.bold {
-   margin: 35px 0 35px 6px;
-   font-size: 22px;
-   font-weight: 700;
 }
 
 .logo-link {
@@ -56,59 +55,110 @@
    align-items: center;
 }
 
+.logo-link__text {
+   margin: 35px 0 35px 6px;
+   font-size: 22px;
+   font-weight: 700;
+}
+
 .logo-link:hover {
    transform: scale(1.2);
 }
 
-.menu__list {
+.menu ul {
    display: flex;
    justify-content: space-between;
    font-size: 22px;
    font-weight: 400;
 }
 
-.menu-link_active {
-   text-decoration: underline;
+.menu li {
+   padding: 0 22px;
 }
 
-.menu-link {
-   padding: 0 0 0 40px;
+.menu li:first-child {
+   padding-left: 0;
+}
+
+.menu li:last-child {
+   padding-right: 0;
+}
+
+.menu__link {
+   padding: 10px 4px;
+   position: relative;
+}
+
+.menu__link:after {
+   content: '';
+   position: absolute;
+   width: 100%;
+   height: 2px;
+   background-color: #FFFFFF;
+   bottom: 0;
+   left: 0;
+   opacity: 0;
+}
+
+.menu li:hover .menu__link:after {
+   opacity: 1;
+   transition: opacity 0.5s ease;
+}
+
+.menu__link_active:after {
+   content: '';
+   position: absolute;
+   width: 100%;
+   height: 2px;
+   background-color: #FFFFFF;
+   bottom: 0;
+   left: 0;
+   opacity: 1;
 }
 
 /* Main section */
 
-.main-title {
-   margin: 38px 0;
+.main-section .container {
+   padding: 38px 0 19px;
+}
+
+.main-section__title {
+   margin-bottom: 38px;
    font-size: 34px;
    font-weight: 700;
 }
 
-.card__wrapper {
+.card-list {
    display: flex;
    justify-content: space-between;
 }
 
-.first__card {
+.card-list__item {
    border: 1px solid #A4A4A4;
+   width: 320px;
+   height: 285px;
+   padding: 40px 33px 29px 36px;
 }
 
-.second__card {
+.card-list__item_bold-border {
    border: 10px solid #A4A4A4;
+   padding: 30px 23px 19px 26px;
+
 }
 
-.third__card {
+.card-list__item_shadow {
    box-shadow: 2px 4px 20px 14px rgba(0, 0, 0, 0.15);
    border-radius: 10px;
+   border: none;
 }
 
-.main-subtitle {
-   padding: 40px 0 20px 36px;
+.card__title {
    font-size: 22px;
    font-weight: 700;
+   margin-bottom: 20px;
 }
 
-.main-text {
-   padding: 0 33px 29px 36px;
+.card__text {
    line-height: 21px;
    font-size: 18px;
    font-weight: 400;
@@ -117,13 +167,20 @@
 .full-text {
    font-size: 18px;
    font-weight: 700;
+   margin-top: 4px;
    color: #22A2EC;
+   display: block;
+   cursor: pointer;
 }
 
 /* Secondary section */
 
+.secondary-section .container {
+   padding: 19px 0 65px;
+}
+
 .secondary-title {
-   margin: 38px 0;
+   margin-bottom: 38px;
    font-size: 28px;
    font-weight: 700;
 }
@@ -133,8 +190,9 @@
    justify-content: space-between;
 }
 
-.form__input, .form__input_increased, .form__button {
-   box-sizing: border-box;
+.form {
+   display: flex;
+   flex-direction: column;
 }
 
 .form__input {
@@ -147,18 +205,16 @@
    font-weight: 400;
 }
 
-.form__input_increased {
-   margin-bottom: 10px;
-   margin-right: 56px;
-   padding: 19px 27px 97px 27px;
-   border: 1px solid #E5E5E5;
-   width: 402px;
+.form textarea {
+   min-height: 60px;
+   max-height: 400px;
    height: 153px;
-   font-size: 20px;
-   font-weight: 400;
+   width: 402px;
+   resize: vertical;
+
 }
 
-.form__input::placeholder, .form__input_increased::placeholder {
+.form__input::placeholder {
    color: rgb(164, 164, 164, 1);
 }
 
@@ -170,6 +226,7 @@
    background-color: #EBD82B;
    font-size: 18px;
    font-weight: 700;
+   cursor: pointer;
 }
 
 .form__secure-data {
@@ -178,50 +235,44 @@
    color: rgb(164, 164, 164, 1);
 }
 
-.business-card {
-   box-sizing: border-box;
+.cutaway {
+   padding: 30px 51px 39px 40px;
    width: 618px;
    height: 363px;
    background-color: #468BB2;
    border-radius: 10px;
 }
 
-.card-wrapper {
-   float: left;
-}
-
-.card-title {
-   box-sizing: border-box;
-   margin: 30px 0 26px 40px;
-   width: 270px;
+.cutaway__title {
    color: #fff;
    font-size: 22px;
    font-weight: 700;
 }
 
-.card-text {
-   box-sizing: border-box;
-   margin: 0 17px 40px 40px;
-   width: 269px;
+.cutaway__wrapper {
+   display: flex;
+   flex-direction: row;
+}
+
+.cutaway__text {
+   padding-top: 25px;
    font-size: 18px;
    font-weight: 400;
 }
 
-.magnifier-pic {
-   float: right;
-   margin: 70px 51px 39px 0;
+.cutaway__magnifier {
+   padding-top: 13px;
 }
 
 /* Footer */
 
 .footer {
-   margin: 65px 0 0 0;
-   height: 64px;
    background-color: #22A2EC;
    color: #fff;
 }
 
 .footer .container {
+   height: 64px;
    display: flex;
    justify-content: space-between;
    align-items: center;
@@ -233,37 +284,40 @@
    align-items: center;
 }
 
-.footer-copyright {
+.footer__copyright {
    font-size: 16px;
    font-weight: 400;
    margin: 21px 0 21px 16px;  
 }
 
-.some__button, .another__button, .footer-form__input {
-   margin: 15px 16px 14px 16px;
+.footer__interaction {
+   display: flex;
+   justify-content: space-between;
+
 }
 
-.some__button, .another__button {
-   padding: 8px 0 8px 0;
+.footer__button, .footer__input {
+   margin: 15px 16px 14px;
+}
+
+.footer__button {
    width: 138px;
+   height: 32px;
    font-size: 14px;
    font-weight: 700;
    border-radius: 10px;
-}
-
-.some__button {
+   cursor: pointer;
    background-color: #FFFFFF;
    color: #22A2EC;
 }
 
-.another__button {
-   border: 1px solid #FFFFFF;;
+.footer__button_blue {
+   border: 1px solid #FFFFFF;
    background-color: #22A2EC;
    color: #FFFFFF;
 }
 
-.footer-form__input {
-   box-sizing: border-box;  
+.footer__input {
    padding: 8px 36px 8px 32px;
    width: 170px;
    font-size: 14px;
@@ -271,6 +325,6 @@
    background-color: #FFFFFF;
 }
 
-.footer-form__input::placeholder {
+.footer__input::placeholder {
    color: #22A2EC;
 }
