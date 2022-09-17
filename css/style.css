@@ -23,7 +23,6 @@
 }
 
  /* Fonts connecting */
-
  body {
    font-family: 'Roboto', sans-serif;
  }
@@ -34,9 +33,16 @@
    width: 1140px;
 }
 
-/* Main setting */
+/* line-clamp settings */
+.line-clamp {
+   display: -webkit-box;
+   -webkit-line-clamp: 7;
+   -webkit-box-orient: vertical;  
+   overflow: hidden;
+}
 
-main {
+/* Main setting */
+ main {
    min-height: calc(100vh - 160px);
 }
 
@@ -104,11 +110,11 @@ main {
    bottom: 0;
    left: 0;
    opacity: 0;
+   transition: opacity 0.5s ease;
 }
 
 .menu li:hover .menu__link:after {
    opacity: 1;
-   transition: opacity 0.5s ease;
 }
 
 .menu__link_active:after {
@@ -209,11 +215,11 @@ main {
    height: 60px;
    font-size: 20px;
    font-weight: 400;
+   transition: border 0.5s ease;
 }
 
 .form__input:focus {
    border: 1px solid #22A2EC;
-   transition: 0.5s;
 }
 
 .form textarea {
@@ -226,7 +232,7 @@ main {
 }
 
 .form__input::placeholder {
-   color: rgb(164, 164, 164, 1);
+   color: #a4a4a4;
 }
 
 .form__button {
@@ -238,11 +244,11 @@ main {
    font-size: 18px;
    font-weight: 700;
    cursor: pointer;
+   transition: background-color 0.5s ease;
 }
 
 .form__button:hover {
    background-color: #DD6325;
-   transition: 0.5s;
 }
 
 .form__secure-data {
@@ -324,13 +330,14 @@ main {
    cursor: pointer;
    background-color: #FFFFFF;
    color: #22A2EC;
+   transition: all 0.5s ease;
+   border: 1px solid #FFFFFF;
 }
 
 .footer__button:hover {
    border: 1px solid #FFFFFF;
    background-color: #22A2EC;
    color: #FFFFFF;
-   transition: 0.5s;
 }
 
 .footer__button_blue {
@@ -346,16 +353,17 @@ main {
 }
 
 .footer__input {
-   padding: 8px 36px 8px 32px;
+   padding: 7px 36px 7px 32px;
    width: 170px;
    font-size: 14px;
    font-weight: 300;
    background-color: #FFFFFF;
+   border: 1px solid #FFFFFF;
+   transition: border 0.5s ease;
 }
 
 .footer__input:focus {
    border: 1px solid #D4662E;
-   transition: 0.5s;
 }
 
 .footer__input::placeholder {
